@@ -1,0 +1,236 @@
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  overflow-x: hidden; 
+}
+
+#root {
+  width: 100%;
+}
+
+.App {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+  width: 100%;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: none; 
+  justify-items: center;
+  padding: 0;
+}
+
+.product-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+  width: 100%;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e44d26;
+  margin-bottom: 20px;
+}
+
+.cart-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+}
+
+.add-button {
+  background: linear-gradient(45deg, #FF6B35, #F7931E);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.add-button:hover {
+  background: linear-gradient(45deg, #E55A2B, #E58215);
+  transform: scale(1.05);
+}
+
+.counter {
+  font-size: 1rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.app-footer {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  width: 100%;
+}
+
+.counter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.reset-button {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100px;
+}
+
+.reset-button:hover {
+  background: #5a6268;
+  transform: scale(1.05);
+}
+
+@media (min-width: 1400px) {
+  .products-container {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1399px) {
+  .products-container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .products-container {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+  
+  .App {
+    padding: 15px;
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .product-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .app-header p {
+    font-size: 1rem;
+  }
+  
+  .image-container {
+    height: 180px;
+  }
+}
