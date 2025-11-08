@@ -1,4 +1,3 @@
-// src/components/ProductCard.jsx
 import { useState, useEffect } from 'react';
 import { useCart } from '../contexts/CartContext';
 
@@ -80,5 +79,6 @@ function ProductCard({ product }) {
     </div>
   );
 }
+
 
 export default ProductCard;
