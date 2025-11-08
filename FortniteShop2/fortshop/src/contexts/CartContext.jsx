@@ -1,4 +1,3 @@
-// src/contexts/CartContext.jsx
 import { createContext, useContext, useReducer, useEffect } from 'react';
 
 const CartContext = createContext();
@@ -162,4 +161,5 @@ export function useCart() {
     throw new Error('useCart must be used within a CartProvider');
   }
   return context;
+
 }
